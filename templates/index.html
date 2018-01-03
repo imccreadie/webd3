@@ -1,0 +1,58 @@
+<html ng-app="D3App">
+    <head>
+        <title>Angular D3</title>
+        <link rel="stylesheet" href="{{url_for('static', filename='css_lib/bootstrap.min.css')}}">
+    <style>
+      .chart {
+        background: #eee;
+        padding: 3px;
+      }
+
+      .chart div {
+         width: 0;
+         transition: all 1s ease-out;
+         -moz-transition: all 1s ease-out;
+         -webkit-transition: all 1s east-out;
+      }
+
+      .chart div {
+        font: 10px sans-serif;
+        background-color: steelblue;
+        text-align: right;
+        padding: 3px;
+        margin: 5px;
+        color: white;
+        box-shadow: 2px 2px 2px #666;
+      }
+      body {
+        font: 10px sans-serif;
+      }
+
+      .axis path,
+      .axis line {
+        fill: none;
+        stroke: #000;
+        shape-rendering: crispEdges;
+      }
+
+      .dot {
+        stroke: #000;
+      }
+    </style
+    </head>
+    <body ng-controller="PlotController">
+        <h1>Test Page for Angular/D3</h1>
+        <form role="form" ng-submit="getResults()">
+          <input type="text" ng-model="url" name="url" class="form-control" id="url-box" placeholder="Enter URL..." style="max-width: 300px;"></input>
+        </form>
+        <bar-chart chart-data="cData"></bar-chart>
+        <scatter x="myX" y="myY"></scatter>
+    </body>
+    <script src="{{url_for('static', filename='js_lib/angular.js')}}"></script>
+    <script src="{{url_for('static', filename='js_lib/ui-bootstrap.js')}}"></script>
+    <script src="{{url_for('static', filename='js_lib/d3.js')}}"></script>
+    <script src="{{url_for('static', filename='js_lib/crossfilter.js')}}"></script>
+    <script src="{{url_for('static', filename='js_lib/dc.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/main.js')}}"></script>
+    <script src="{{url_for('static', filename='js/d3app.js')}}"></script>
+</html>
